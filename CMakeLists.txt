@@ -10,6 +10,6 @@ enable_testing()
 add_test(NAME main COMMAND main)
 
 
-IF (WIN32)
+IF (WIN32 AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	target_link_libraries(main -static)
 ENDIF()
