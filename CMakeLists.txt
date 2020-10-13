@@ -8,3 +8,8 @@ install(TARGETS main)
 
 enable_testing()
 add_test(NAME main COMMAND main)
+
+
+IF (WIN32)
+	target_link_libraries(myLib -static-libgcc -static-libstdc++)
+ENDIF()
