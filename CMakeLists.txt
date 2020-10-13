@@ -11,5 +11,5 @@ add_test(NAME main COMMAND main)
 
 
 IF (WIN32)
-	target_link_libraries(main -static-libgcc -static-libstdc++)
+	target_link_libraries(main -static)
 ENDIF()
